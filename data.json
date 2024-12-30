@@ -1,0 +1,10 @@
+{
+    "kind": "customsearch#search",
+    "items": [
+        {
+            "title": "Example Title",
+            "link": "https://example.com",
+            "snippet": "Example snippet..."
+        }
+    ]
+}
