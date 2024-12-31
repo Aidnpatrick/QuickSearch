@@ -13,7 +13,7 @@
 <body>
     <div class="top">
 
-        <button class="buttons-more"><img src="icons/bars-solid.svg" onclick="showSideBar()"></button>
+        <button class="buttons-more" onclick="showSideBar()"><img src="icons/bars-solid.svg" ></button>
         <div class="search-div" id="searchDiv">
         
             <input class="search-input" placeholder="Search the Web" id="searchInput"  onkeydown="checkEnter(event)"></input>
@@ -28,8 +28,9 @@
     <div class="flex-row-center" id="content">
         <div class="side-bar" id="sideBar">
             <h3 style="margin-left: 10px">More Apps</h3>
-            <a class="link-button">            <img class="img" src="icons/white-search-icon.svg">Search</a>
-            <a class="link-button">Weather</a>
+            <a class="link-button"><img class="img" src="icons/white-search-icon.svg" href="index.html">Search</a>
+            <a class="link-button"><img class="img" src="icons/cloud-solid.svg" href="weather.html">Weather</a>
+            <a class="link-button"><img class="img" src="icons/user-solid.svg" href="about.html">About</a>
         </div>
         <div class="column">
             <div class="content" id="resultDiv"></div>
