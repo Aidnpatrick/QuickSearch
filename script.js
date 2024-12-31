@@ -26,22 +26,29 @@ function search() {
         }
   
         data.items.forEach(item => {
-          const title = document.createElement("p");
+          const title = document.createElement("a");
           title.textContent = item.title;
           title.style.fontWeight = "bold";
+          title.href = item.link;
+          title.target = "_blank";
+          title.className = "search-result";
           searchDiv.appendChild(title);
-  
-          const link = document.createElement("a");
+/*          const link = document.createElement("a");
           link.className = "search-result";
           link.textContent = item.link;
           link.href = item.link;
           link.target = "_blank";
           link.style.color = "blue";
           searchDiv.appendChild(link);
-          
-          const spacer = document.createElement("hr");
-          spacer.className = "hr";
-          searchDiv.appendChild(spacer);
+*/
+          const snippet = document.createElement("p");
+          snippet.textContent = item.snippet;
+          searchDiv.appendChild(snippet);
+
+          for(let i = 0; i < 2; i++) {
+            const spacer = document.createElement("br");
+            searchDiv.appendChild(spacer);
+          }
         });
       })
 
@@ -49,20 +56,41 @@ function search() {
         console.error("Error fetching search results:", error);
       });
   }
+
+  document.addEventListener("DOMContentLoaded", function(){
+    const request = 1;
+    const key = "L1igJ1IKeYlWT9CckS0cQIGeevVctOAl";
+    const url = "https://api.tomorrow.io/v4/weather/forecast?location=42.3478,-71.0466&apikey=L1igJ1IKeYlWT9CckS0cQIGeevVctOAl";
+    
+  });
+
   
   function checkEnter(event) {
     if (event.key === "Enter") {
       search();
     }
   }
+
   document.addEventListener("DOMContentLoaded", function() {
     divDefault = document.getElementById("default");
-    divDefault.textContent = "Search Anything you like."
-
+    divDefault.textContent = "What will you search today?";
   });
   
 
   function stopDafaultText() {
-    const default = document.getElementById('default');
-    default.textContent = "";
+    const setUp = document.getElementById('default');
+    setUp.textContent = "";
+
+    const content = document.getElementById('content');
+    content.className = "flex-row";
+
+  }
+
+  function showSideBar() {
+    const sideBar = document.getElementById('sideBar');
+    if(sideBar.style.visibility == "hidden") {
+      sideBar.style.visibility = "visible";
+    } else {
+      sideBar.style.visibility = "hidden";
+    }
   }

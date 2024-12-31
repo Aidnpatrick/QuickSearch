@@ -1,15 +1,33 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(205, 205, 205);
+    background-color: rgb(255, 255, 255);
     margin: 0;
+    color: rgb(85, 85, 85);
 }
+.jersey-25-regular {
+    font-family: "Jersey 25", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: blue;
+    font-size: 30px;
+    background-color: lightblue;
+    padding: 10px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    right: 10px;
+    text-decoration: none;
+  }
+  
 .search-input {
     border: none;
     width: 90%;
     opacity: 90%;
     color: black;
-    background-color: rgb(231,231,231);
+    font-size: 15px;
 }
 
 
@@ -18,31 +36,35 @@ body {
     border: none;
 }
 .top {
-    
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: sticky;
+    position: fixed;
+    top: 0px;
     z-index: 1000;
-    top: 10px;
+    background-color: white;
+    height: 50px;
+    box-shadow: rgb(206, 206, 206) 0px 0px 10px 1px;
+}
+.home-page-link {
 
 }
+
 .search-div {
-    width: 70%;
+    width: 45%;
     padding: 5px;
     height: 30px;
-    background-color: rgb(231, 231, 231);
     opacity: 90%;
-
-
+    border: 1px solid rgb(190, 190, 190);
+    
     display: flex;
     align-items: center;
     border-radius: 10px;
     position: relative;
+    z-index: 1000;
 }
 .search-div:focus {
-    box-shadow: 0 0 10px 1px rgb(155, 155, 155);
+    box-shadow: 0 0 10px 1px rgb(206, 206, 206);
 
 }
 
@@ -50,8 +72,8 @@ body {
 .hovered {
     background-color: lightblue;
   }
-.search-button, .buttons {
-    position: absolute;
+.search-button, .buttons-more {
+
     border-radius: 5px;
     width: 30px;
     height: 30px;
@@ -60,14 +82,32 @@ body {
 
     border: 1.5px solid rgb(180, 180, 180);
     transition: background 0.3s ease;
+
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    
 }
 .search-button {
+    position: absolute;
     right: 5px;
+}
+.buttons-more {
+    z-index: 1003;
+    margin: 10px;
+    left: 10px;
 }
 .search-button:hover {
     background-color: rgb(230, 230, 230);
 }
 
+.buttons-more:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+.search-button:active {
+
+}
 .div-widget {
     margin: 5px;
     width: 50%;
@@ -84,19 +124,10 @@ body {
 }
 
 .content {
-    margin: 3px;
+    margin: 10px;
     flex-wrap: wrap;
 }
 
-.flex-column-center {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
-.flex-row {
-    display: flex;
-    flex-direction: row;
-}
 
 .search-result {
     text-decoration: none;
@@ -113,6 +144,68 @@ body {
     justify-content: center;
     text-align: center;
     padding-block: 100px;
-    color: rgb(91, 91, 91);
 
+}
+.img {
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+}
+.side-bar {
+    border-bottom-right-radius: 10px;
+    width: 30%;
+    height:80vh;
+    box-shadow: 0px 4px 10px 1px rgb(206, 206, 206);
+    border-top: 1px solid rgb(190, 190, 190);
+    background-color: white;
+    position: fixed; /* Ensures the sidebar remains in place when scrolling */
+    top: 50px;
+    left: 0;
+    z-index: 1000;
+    
+    visibility: hidden;
+    display: flex; /* Hidden by default */
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+}
+.link-button {
+    cursor: pointer;
+    width: 100%;
+    align-items: center;
+    display: flex;
+}
+.link-button:hover {
+    background-color: rgb(190, 190, 190);
+}
+.absolute {
+    position: sticky;
+    top: 0;
+    left: 0px;
+    z-index: 1000;
+}
+
+
+
+.flex-column-center {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.column {
+    width: 70%;
+    height: 90vh;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+.flex-row-center {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
 }

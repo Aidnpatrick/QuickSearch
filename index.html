@@ -6,24 +6,37 @@
     <link rel="stylesheet" href="style.css">
 
     <title>Home Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Jersey+25&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="top">
-        <button class="buttons"><img src=""></button>
+
+        <button class="buttons-more"><img src="icons/bars-solid.svg" onclick="showSideBar()"></button>
         <div class="search-div" id="searchDiv">
         
-            <input class="search-input" placeholder="Search anything" id="searchInput"  onkeydown="checkEnter(event)"></input>
+            <input class="search-input" placeholder="Search the Web" id="searchInput"  onkeydown="checkEnter(event)"></input>
             <button class="search-button" onclick="searchDiv" onclick="search()">
                 <img src="icons/white-search-icon.svg" onclick="search()">
             </button>
             
         </div>
+        <a class="jersey-25-regular" href="index.html">CSE</a>
     </div>
-    <br>
-    <hr class="hr">
     
-    <div class="content" id="resultDiv"></div>
-    <div class="default" id="default"></div>
+    <div class="flex-row-center" id="content">
+        <div class="side-bar" id="sideBar">
+            <h3 style="margin-left: 10px">More Apps</h3>
+            <a class="link-button">            <img class="img" src="icons/white-search-icon.svg">Search</a>
+            <a class="link-button">Weather</a>
+        </div>
+        <div class="column">
+            <div class="content" id="resultDiv"></div>
+            <div class="default" id="default"></div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
