@@ -18,10 +18,10 @@ function search() {
       })
       .then(data => {
         const searchDiv = document.getElementById('resultDiv');
-        searchDiv.innerHTML = "<h3>Search Results:</h3>";
+        searchDiv.innerHTML = "<h3>Search Results:</h3><hr>";
   
         if (!data.items || data.items.length === 0) {
-          searchDiv.innerHTML += "<p>No results found.</p>";
+          searchDiv.innerHTML += "<p>No results found. Check your search if:</p><b><p>There's a typo.<b>";
           return;
         }
   
@@ -80,10 +80,12 @@ function search() {
   function stopDafaultText() {
     const setUp = document.getElementById('default');
     setUp.textContent = "";
-
+    setUp.style.display = "none";
     const content = document.getElementById('content');
     content.className = "flex-row";
 
+    const footer = document.getElementById('footer');
+    footer.style.visibility = "visible";
   }
 
   function showSideBar() {

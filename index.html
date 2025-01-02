@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 
-    <title>Home Page</title>
+    <title>Search</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Jersey+25&display=swap" rel="stylesheet">
@@ -27,14 +27,23 @@
     
     <div class="flex-row-center" id="content">
         <div class="side-bar" id="sideBar">
-            <h3 style="margin-left: 10px">More Apps</h3>
-            <a class="link-button"><img class="img" src="icons/white-search-icon.svg" href="index.html">Search</a>
-            <a class="link-button"><img class="img" src="icons/cloud-solid.svg" href="weather.html">Weather</a>
-            <a class="link-button"><img class="img" src="icons/user-solid.svg" href="about.html">About</a>
+            <br>
+            <a class="link-button" href="index.html"><img class="img" src="icons/white-search-icon.svg">Search</a>
+
+            <a class="link-button" href="weather.html"><img class="img" src="icons/cloud-solid.svg" >Weather</a>
+
+            <hr class="hr">
+            <a class="link-button"href="settings.html"><img class="img" src="icons/gear-solid.svg">Settings</a>
+            <a class="link-button" href="about.html"><img class="img" src="icons/user-solid.svg">About</a>
         </div>
         <div class="column">
+            <br>
+            <br>
             <div class="content" id="resultDiv"></div>
             <div class="default" id="default"></div>
+            <div class="footer" id="footer">
+                <h3>Made by me</h3>
+            </div>
         </div>
     </div>
 

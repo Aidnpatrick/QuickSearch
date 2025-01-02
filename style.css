@@ -118,13 +118,14 @@ body {
     padding: 5px;
 }
 
-.hr {
+hr {
     border-radius: 1px;
     border: 1px solid rgb(169, 169, 169);
 }
 
 .content {
-    margin: 10px;
+    width: 100%;
+    margin: 40px;
     flex-wrap: wrap;
 }
 
@@ -144,7 +145,6 @@ body {
     justify-content: center;
     text-align: center;
     padding-block: 100px;
-
 }
 .img {
     margin: 10px;
@@ -175,6 +175,7 @@ body {
     align-items: center;
     display: flex;
     text-decoration: none;
+    color: rgb(85, 85, 85);
 }
 .link-button:hover {
     background-color: rgb(190, 190, 190);
@@ -187,6 +188,15 @@ body {
 }
 
 
+.footer {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    visibility: hidden;
+    height: 100px;
+    width: 100%;
+}
 
 .flex-column-center {
     align-items: center;
