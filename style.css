@@ -11,7 +11,6 @@ body {
     font-style: normal;
     color: blue;
     font-size: 30px;
-    background-color: lightblue;
     padding: 10px;
     height: 20px;
     display: flex;
@@ -21,7 +20,26 @@ body {
     right: 10px;
     text-decoration: none;
   }
-  
+.logo {
+
+    width: 40px;
+
+}
+.link-logo {
+    position: absolute;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(85, 85, 85);
+    font-weight: bold;
+    font-family: "Jersey 25", serif;
+    font-size: 25px;
+    transition: transform 0.3s ease;
+}
+.link-logo:hover {
+    transform: scale(1.1);
+}
 .search-input {
     border: none;
     width: 90%;
@@ -120,11 +138,14 @@ body {
 
 hr {
     border-radius: 1px;
-    border: 1px solid rgb(169, 169, 169);
+    width: 167%;
+    height: 1px;
+    background: linear-gradient(90deg, #b4b4b4, #cfcfcf 70%, #ffffff);
+    border: none;
 }
 
 .content {
-    width: 100%;
+    width: 80%;
     margin: 40px;
     flex-wrap: wrap;
 }
@@ -146,10 +167,20 @@ hr {
     text-align: center;
     padding-block: 100px;
 }
-.img {
+.img, .costumize {
     margin: 10px;
     width: 20px;
     height: 20px;
+}
+
+.costumize {
+    cursor: pointer;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    border-radius: 50%;
+    background-color: rgb(63, 63, 63);
+    padding: 10px;
 }
 .side-bar {
     border-bottom-right-radius: 10px;
@@ -186,7 +217,19 @@ hr {
     left: 0px;
     z-index: 1000;
 }
-
+.wiki-div {
+    position: absolute;
+    top: 150px;
+    right: 20px;
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 10px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    visibility: hidden;
+    padding: 20px;
+}
 
 .footer {
     align-items: center;
