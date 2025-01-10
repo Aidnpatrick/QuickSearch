@@ -10,19 +10,20 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Jersey+25&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="top">
+<body id="body">
+    <div class="top" id="top">
 
-        <button class="buttons-more" onclick="showSideBar()"><img src="icons/bars-solid.svg" ></button>
+        <button class="buttons-more" onclick="show('sideBar')" id="moreButtons"><img src="icons/bars-solid.svg" ></button>
         <div class="search-div" id="searchDiv">
         
             <input class="search-input" placeholder="Search the Web" id="searchInput"  onkeydown="checkEnter(event)"></input>
-            <button class="search-button" onclick="searchDiv" onclick="search()">
+            <button class="search-button" onclick="searchDiv" onclick="search()" id="searchButton">
                 <img src="icons/white-search-icon.svg" onclick="search()">
             </button>
             
         </div>
-        <a class="link-logo" href="index.html"><img class="logo" src="other-images/logo.png">QuickSeek</a>
+        <a class="link-logo" href="index.html"><img class="logo" src="other-images/logo.png" alt ="img">QuickSeek</a>
+
     </div>
     <div class="side-bar" id="sideBar">
         <br>
@@ -31,9 +32,9 @@
         <a class="link-button" href="weather.html"><img class="img" src="icons/cloud-solid.svg" >Weather</a>
 
         <a class="link-button"href="settings.html"><img class="img" src="icons/gear-solid.svg">Settings</a>
-        
+
         <a class="link-button" href="about.html"><img class="img" src="icons/user-solid.svg">About</a>
-    </div> 
+    </div>
     <div class="flex-row-center" id="content">
 
         <div class="column">
@@ -43,16 +44,33 @@
             <div class="search-type-div"></div>
             <div class="content" id="resultDiv"></div>
             <div class="default" id="default"></div>
-            <div class="wiki-div" id="wikiDiv"><p id="wikiHeading"></p></div>
+            <div class="wiki-div" id="dictionaryDiv"><p id="wikiHeading"></p></div>
             <div class="footer" id="footer">
                 <h3>Couldnt Find what you wanna search?<br> Womp Womp.</h3>
             </div>
         </div>
 
     </div>
-    <img class="costumize" src="icons/paintbrush-solid.svg" style="">
+    <div class="customize-div" id="customizeDiv">
+        <div class="flex-row" style="align-items: center;">
+            <div class="customize-prop" src="icons/paintbrush-solid.svg"><img class="img" src="icons/paintbrush-solid.svg"></div><h3>Customize your broswer</h3>
+        </div>
+        <div class="section">
+            <hr class="short-hr" style="margin-left: -30px;">
+            <p>Themes</p>
+            <div class="flex-wrap" id="flexWrapCustom1" style="justify-content: start;"></div>
+            <hr class="short-hr" style="margin-left: -30px;">
+            <p>Font Weight</p>
+            <div class="flex-wrap" id="flexWrapCustom2" style="justify-content: start; "></div>
+            <hr class="short-hr" style="margin-left: -30px;">
+        </div>
 
+    </div>
+    <button class="customize" src="icons/paintbrush-solid.svg"onclick="overlay('customizeDiv')"><img class="img"src="icons/paintbrush-solid.svg"></button>
+    
 
+    <div class="overlay" id="overLay"></div>
+    
     <script src="script.js"></script>
 </body>
 </html>

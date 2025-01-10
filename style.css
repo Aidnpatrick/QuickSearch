@@ -5,6 +5,7 @@ body {
     margin: 0;
     color: rgb(85, 85, 85);
 }
+
 .jersey-25-regular {
     font-family: "Jersey 25", serif;
     font-weight: 400;
@@ -23,7 +24,8 @@ body {
 .logo {
 
     width: 40px;
-
+    border-radius: 10px;
+    margin-right: 5px;
 }
 .link-logo {
     position: absolute;
@@ -41,6 +43,7 @@ body {
     transform: scale(1.1);
 }
 .search-input {
+    background-color: transparent;
     border: none;
     width: 90%;
     opacity: 90%;
@@ -62,7 +65,7 @@ body {
     z-index: 1000;
     background-color: white;
     height: 50px;
-    box-shadow: rgb(206, 206, 206) 0px 0px 10px 1px;
+    box-shadow: rgb(83, 83, 83) 0px 0px 10px 1px;
 }
 .home-page-link {
 
@@ -81,6 +84,7 @@ body {
     position: relative;
     z-index: 1000;
 }
+
 .search-div:focus {
     box-shadow: 0 0 10px 1px rgb(206, 206, 206);
 
@@ -143,6 +147,13 @@ hr {
     background: linear-gradient(90deg, #b4b4b4, #cfcfcf 70%, #ffffff);
     border: none;
 }
+.short-hr {
+    width: 100%;
+    border-radius: 1px;
+    height: 1px;
+    background-color: grey;
+    border: none;
+}
 
 .content {
     width: 80%;
@@ -150,8 +161,12 @@ hr {
     flex-wrap: wrap;
 }
 
+.iframe-content {
+    width: 100%;
+    height: 100%;
+}
 
-.search-result {
+.search-result, .search-top-link {
     text-decoration: none;
     color: rgb(77, 77, 255);
     
@@ -159,6 +174,10 @@ hr {
 .search-result:hover {
     text-decoration: underline;
 }
+.search-top-link:hover {
+    text-decoration: none;
+}
+
 
 .default {
     display: flex;
@@ -173,26 +192,18 @@ hr {
     height: 20px;
 }
 
-.costumize {
-    cursor: pointer;
-    position: fixed;
-    bottom: 0px;
-    right: 0px;
-    border-radius: 50%;
-    background-color: rgb(63, 63, 63);
-    padding: 10px;
-}
+
 .side-bar {
     border-bottom-right-radius: 10px;
     width: 30%;
     height:80vh;
-    box-shadow: 0px 4px 10px 1px rgb(206, 206, 206);
+    box-shadow: 0px 4px 10px 1px rgb(83,83,83);
     border-top: 1px solid rgb(190, 190, 190);
-    background-color: white;
+
     position: fixed; /* Ensures the sidebar remains in place when scrolling */
     top: 50px;
     left: 0;
-    z-index: 1000;
+    z-index: 1001;
     
     visibility: hidden;
     display: flex; /* Hidden by default */
@@ -207,9 +218,11 @@ hr {
     display: flex;
     text-decoration: none;
     color: rgb(85, 85, 85);
+    background-color: transparent;
+    transition: margin 0.3s ease;
 }
 .link-button:hover {
-    background-color: rgb(190, 190, 190);
+    margin-left: 10px;
 }
 .absolute {
     position: sticky;
@@ -226,11 +239,131 @@ hr {
     justify-content: center;
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 23%;
     visibility: hidden;
     padding: 20px;
+    margin-bottom: 20px;
+}
+.customize, .customize-prop {
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    background-color: rgb(63, 63, 63);
+    transition: background 0.3s ease;
+    border: none;
+    
+
 }
 
+.customize-prop {
+    height: 20px;
+    width: 20px;
+    padding: 10px;
+    
+    background-color: rgb(143, 143, 143);
+    margin-right: 10px;
+}
+.customize {
+    cursor: pointer;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    padding: 10px;
+    height: 45px;
+    width: 45px;
+}
+.customize:hover {
+    background-color: rgb(143, 143, 143);
+}
+
+.customize-div {
+    left: 3%;
+    right: 3%;
+    opacity: 100%;
+    z-index: 1003;
+    position: fixed;
+    bottom: 5%;
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+    width: 90%;
+    overflow: y;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(71, 71, 71, 0.7);
+}
+.customize-colors {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: blue;
+
+    transition: opacity 0.3s ease;
+    border: 1px solid grey;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.customize-colors:hover {
+    opacity: 70%;
+}
+
+.customize-color:active {
+    opacity: 50%;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+
+    width: 90%;
+    padding: 10px;
+}
+.section p {
+    margin-top: -20x;
+}
+
+
+.font-weight-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px;
+    width: 150px;
+    border: 1px solid rgb(190, 190, 190);
+
+    background-color: transparent;
+    border-radius: 10px;
+    margin: 10px;
+    margin-left: -0px;
+    transition: background 0.3s ease;
+}
+
+.font-weight-button:hover {
+    background-color: rgb(190, 190, 190);
+}
+
+.overlay {
+
+    justify-content: center;
+    align-items: center;
+    z-index: 1002;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 50%;
+    bottom: 0px;
+    display: none;
+}
 .footer {
     align-items: center;
     text-align: center;
@@ -262,4 +395,17 @@ hr {
     align-items: center;
     text-align: center;
     position: relative;
+}
+.flex-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    justify-content: center;
+}
+
+.test {
+    background-color: light;
+    box-shadow: none;
 }
