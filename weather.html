@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="weather.css">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Jersey+25&display=swap" rel="stylesheet">
+</head>
+<body id="body">
+    <div class="top" id="top">
+
+        <button class="buttons-more" onclick="show('sideBar')" id="moreButtons"><img src="icons/bars-solid.svg" style="width: 110px"></button>
+        <div class="search-div" id="searchDiv">
+        
+            <input class="search-input" placeholder="Search City" id="searchInputCity"  onkeydown="checkEnterCity(event)"></input>
+
+            
+        </div>
+        <a class="link-logo" href="index.html"><img class="logo" src="other-images/logo.png" alt ="img">QuickSeek</a>
+    </div>
+    <div class="side-bar" id="sideBar">
+        <a class="link-button" href="index.html"><img class="img" src="icons/white-search-icon.svg">Search</a>
+
+        <a class="link-button" href="weather.html"><img class="img" src="icons/cloud-solid.svg" >Weather</a>
+
+        <a class="link-button"href="settings.html"><img class="img" src="icons/gear-solid.svg">Settings</a>
+
+        <a class="link-button" href="about.html"><img class="img" src="icons/user-solid.svg">About</a>
+        <br>
+    </div>
+
+    <div class="flex-row-center" id="content">
+        <div class="column" style="width: 100%; justify-content: center; align-items: center; display: flex; flex-direction: column;">
+            <br><br><br><br>
+
+            <div class="flex-row">
+                <img src="icons/gear-solid.svg">
+            </div>
+            <div class="main-weather-block" id="mainWeatherBlock">
+                <br>
+                <div class="flex-row" style="width: 100%; justify-content: center;">
+                    <div class="sub-boxes" style="width: 65%; position: relative;">
+                        <div class="sub-heading">
+                            <p style="margin-left: 12px; margin-right: 30px; font-weight: bold;" id="subHeading">Current Weather:</p>
+                            <div class="sub-heading-sub">
+                                <p id="localTime"></p>
+                            </div>
+                        </div>
+                        <h1 id="currentTemperature" style="font-size: 40px; margin-left: 12px; height: 1px;">19°</h1>
+                        <p id="weatherText" style="margin-left: 12px; font-size: 25px;"></p>
+                        <img id="img" class="weather-img">
+                        <br>
+                        <p style="margin-left: 12px;" id="lastUpdated"></p>
+                    </div>
+
+
+                    <div class="sub-boxes" style="width: 35%;">
+                        <div class="sub-heading" style="background-color: transparent;">
+                            <p style="margin-left: 12px; font-weight: bold;">What you'll Expect Today:</p>
+                        </div>
+                        <p id="wind"></p>
+                        <p id="humidity"></p>
+                    </div>
+                </div>
+                <br>
+
+
+
+            </div>
+            <br>
+
+
+        </div>
+    </div>
+    <div class="content-brightness" id="contentBrightness"></div>
+    <script src="script.js"></script>
+</body>
+</html>

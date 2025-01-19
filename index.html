@@ -13,20 +13,17 @@
 <body id="body">
     <div class="top" id="top">
 
-        <button class="buttons-more" onclick="show('sideBar')" id="moreButtons"><img src="icons/bars-solid.svg" ></button>
+        <button class="buttons-more" onclick="show('sideBar')" id="moreButtons"><img src="icons/bars-solid.svg" style="width: 110px"></button>
         <div class="search-div" id="searchDiv">
         
             <input class="search-input" placeholder="Search the Web" id="searchInput"  onkeydown="checkEnter(event)"></input>
-            <button class="search-button" onclick="searchDiv" onclick="search()" id="searchButton">
-                <img src="icons/white-search-icon.svg" onclick="search()">
-            </button>
+
             
         </div>
         <a class="link-logo" href="index.html"><img class="logo" src="other-images/logo.png" alt ="img">QuickSeek</a>
 
     </div>
     <div class="side-bar" id="sideBar">
-        <br>
         <a class="link-button" href="index.html"><img class="img" src="icons/white-search-icon.svg">Search</a>
 
         <a class="link-button" href="weather.html"><img class="img" src="icons/cloud-solid.svg" >Weather</a>
@@ -34,6 +31,7 @@
         <a class="link-button"href="settings.html"><img class="img" src="icons/gear-solid.svg">Settings</a>
 
         <a class="link-button" href="about.html"><img class="img" src="icons/user-solid.svg">About</a>
+        <br>
     </div>
     <div class="flex-row-center" id="content">
 
@@ -70,7 +68,7 @@
     
 
     <div class="overlay" id="overLay"></div>
-    
+    <div class="content-brightness" id="contentBrightness"></div>
     <script src="script.js"></script>
 </body>
 </html>
