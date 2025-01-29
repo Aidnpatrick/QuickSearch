@@ -42,10 +42,10 @@
             </div>
             <div class="main-weather-block" id="mainWeatherBlock">
                 <br>
-                <div class="flex-row" style="width: 100%; justify-content: center;">
+                <div class="flex-row" style="justify-content: center; width: 100%;">
                     <div class="sub-boxes" style="width: 65%; position: relative;">
                         <div class="sub-heading">
-                            <p style="margin-left: 12px; margin-right: 30px; font-weight: bold;" id="subHeading">Current Weather:</p>
+                            <p style="margin-left: 12px; margin-right: 30px; font-weight: bold; font-size: 18px;" id="subHeading">Current Weather:</p>
                             <div class="sub-heading-sub">
                                 <p id="localTime"></p>
                             </div>
@@ -62,8 +62,23 @@
                         <div class="sub-heading" style="background-color: transparent;">
                             <p style="margin-left: 12px; font-weight: bold;">What you'll Expect Today:</p>
                         </div>
-                        <p id="wind"></p>
-                        <p id="humidity"></p>
+                        <div class="flex-row" style="width: 100%; display: flex; align-items: center; justify-content: center;">
+                            <div class="sub-stats">
+                                <img src="icons/wind-solid.svg">
+                                <p>Wind</p>
+                                <p id="wind"></p>
+                            </div>
+                            <div class="sub-stats">
+                                <img src="icons/droplet-solid.svg">
+                                <p>Humidity</p>
+                                <p id="humidity"></p>
+                            </div>
+                            <div class="sub-stats">
+                                <img src="icons/eye-solid.svg">
+                                <p>Visibility</p>
+                                <p id="vis_miles"></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <br>

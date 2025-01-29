@@ -1,7 +1,7 @@
 
 .main-weather-block {
-    padding: 5px;
-    width: 95%;
+    width: 90%;
+    max-width: 1200px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -47,7 +47,7 @@
 .sub-heading {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    background-color: #d6d6d6;
+    background-color: rgb(216, 216, 216);
     width: 100%;
     height: 30px;
     display: flex;
@@ -59,7 +59,7 @@
 }
 
 .sub-heading-sub {
-    background-color: grey;
+    background-color: rgb(128, 128, 128);
     width: 200px;
     height: 20px;
     padding: 5px;
@@ -83,10 +83,30 @@
 
 .weather-img {
     position: absolute;
-    left: 18%;
+    left: 30%;
     bottom: 120px;
     width: 70px;
 }
+
+
+
+.sub-stats {
+    justify-content: center;
+    padding: 10px;
+
+}
+
+.sub-stats p {
+    font-size: 18px;
+    height: 10px;
+}
+
+.sub-stats img {
+    width: 35px;
+    height: 35px;
+    opacity: 80%;
+}
+
 .hr {
     
     width: 90%;

@@ -331,6 +331,7 @@ hr {
 .font-weight-button {
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: center;
 
     padding: 10px;
@@ -341,7 +342,9 @@ hr {
     border-radius: 10px;
     margin: 10px;
     margin-left: -0px;
+    font-size: 18px;
     transition: background 0.3s ease;
+    cursor: pointer;
 }
 
 .font-weight-button:hover {

@@ -126,6 +126,8 @@ function loadWeather() {
 
       document.getElementById("wind").textContent = `${data.current.wind_mph} mph`;
       document.getElementById("humidity").textContent = `${data.current.humidity}%`;
+      document.getElementById("vis_miles").textContent = `${data.current.vis_miles} miles`;
+
     })
     .catch(error => {
       console.error("Error fetching weather data:", error);
@@ -326,6 +328,9 @@ fontWeights.forEach((fontWeightType, index) => {
   });
   flexWrap_2.appendChild(fontWeightButton);
 });
+
+
+
 });
 
 function changeColor(colorName) {
@@ -375,10 +380,43 @@ body.style.fontWeight = fontWeightName;
 document.addEventListener("DOMContentLoaded", function() {
 if(localStorage.getItem("background")) {
   changeColor(localStorage.getItem("background"));
+} else {
+  changeColor("#FFFFFF");
 }
 if(localStorage.getItem("fontWeight")) {
   fontWeight(localStorage.getItem("fontWeight"));
+} else {
+  fontWeight("normal");
 }
 });
 
 
+
+// JavaScript to handle form submission without page reload
+const form = document.getElementById('uploadForm');
+const imageUpload = document.getElementById('imageUpload');
+const uploadedImage = document.getElementById('uploadedImage');
+
+form.addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent form from submitting traditionally
+
+    const formData = new FormData();
+    formData.append('image', imageUpload.files[0]);
+
+    // Send the image to the server using Fetch API
+    fetch('/upload', {
+        method: 'POST',
+        body: formData,
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            uploadedImage.src = data.imageUrl; // Display uploaded image
+        } else {
+            alert('Image upload failed!');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
